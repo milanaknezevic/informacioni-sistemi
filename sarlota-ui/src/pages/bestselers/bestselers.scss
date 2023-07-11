@@ -1,0 +1,38 @@
+.recipes {
+  &__header {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      &__search {
+        width: 400px;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+}
+
+.pomoc {
+  margin-left: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
+.mala {
+  background-color: red;
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}

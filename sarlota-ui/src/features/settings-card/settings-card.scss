@@ -1,0 +1,24 @@
+.ant-upload-wrapper.ant-upload-picture-card-wrapper {
+  display: flex;
+}
+.ant-input::placeholder {
+  color: black;
+}
+
+.card {
+  padding: 0 40px;
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-top: 10px;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,15 @@
+.recipe {
+  position: relative;
+  align-items: center;
+  display: flex;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__favorite {
+    position: relative;
+    right: 0;
+    margin-left: auto;
+  }
+}

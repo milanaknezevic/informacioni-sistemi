@@ -1,0 +1,102 @@
+{
+  "rules": [
+    {
+      "methods": [],
+      "pattern": "/zaposleni",
+      "roles": [
+        "POSLASTICAR"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/zaposleni/**",
+      "roles": [
+        "POSLASTICAR"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/zaduzenja",
+      "roles": [
+        "POSLASTICAR","OBICNI_RADNIK"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/zaduzenja/**",
+      "roles": [
+        "POSLASTICAR","OBICNI_RADNIK"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/recepti",
+      "roles": [
+        "POSLASTICAR","OBICNI_RADNIK"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/recepti/**",
+      "roles": [
+        "POSLASTICAR","OBICNI_RADNIK"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/kontakti",
+      "roles": [
+        "POSLASTICAR","OBICNI_RADNIK"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/kontakti/**",
+      "roles": [
+        "POSLASTICAR","OBICNI_RADNIK"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/proizvodi",
+      "roles": [
+        "POSLASTICAR"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/proizvodi/**",
+      "roles": [
+        "POSLASTICAR"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/ponuda",
+      "roles": [
+        "POSLASTICAR"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/ponuda/**",
+      "roles": [
+        "POSLASTICAR"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/narudzbe",
+      "roles": [
+        "POSLASTICAR"
+      ]
+    },
+    {
+      "methods": [],
+      "pattern": "/narudzbe/**",
+      "roles": [
+        "POSLASTICAR"
+      ]
+    }
+  ]
+}

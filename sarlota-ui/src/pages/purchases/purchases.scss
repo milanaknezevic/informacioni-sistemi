@@ -1,0 +1,22 @@
+.purchases {
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,36 @@
+.sider {
+  border-right: 1px solid var(--border-color);
+}
+.site-layout {
+  background: #e6ecf5;
+}
+
+.ant-layout-sider-trigger {
+  // background-color: #fff0f6ab !important;
+}
+
+.logo {
+  width: 100%;
+  padding: 10px;
+  object-fit: contain;
+  object-position: top;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 5px;
+  border-bottom: 1px solid var(--border-color);
+
+  &__avatar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .ant-avatar {
+    background-color: #030852;
+    margin-right: 10px;
+  }
+}

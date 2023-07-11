@@ -1,0 +1,25 @@
+.contacts {
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      &__search {
+        width: 400px;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

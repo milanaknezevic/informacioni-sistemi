@@ -1,0 +1,8 @@
+.order_upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[value=""]::-webkit-datetime-edit{ color: transparent; }
+input:focus::-webkit-datetime-edit{ color: #000; }

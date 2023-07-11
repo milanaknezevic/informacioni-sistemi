@@ -1,0 +1,22 @@
+.login-form {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 40px;
+
+}
+
+.login-style{
+  //background-color: #e6ecf5;
+}
+
+.submit-button{
+margin-left: 20px;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  background-color: #e8f3fc;
+}

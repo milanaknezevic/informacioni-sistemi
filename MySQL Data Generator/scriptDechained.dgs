@@ -1,0 +1,55 @@
+config <= database_name, db_sarlota
+config <= auto_increment_base, 7000
+config <= sample_width, 1
+
+config <= start_date_year, 2023
+config <= end_date_year, 2023
+config <= start_date_month, 5
+config <= start_date_day, 25
+
+config <= custom_link_max_x, 20
+config <= custom_link_max_y, 20
+
+type <= kontakt <= int, string, string, string, string, string
+type <= zaposleni <= int, string, string, string, string, float, boolean, string
+### narudzba has been dechained
+type <= narudzba <= int, datetime, datetime, int, string, string, string, string, string, string, boolean, float, int, string
+type <= recept <= int, string, string, boolean, string, boolean
+type <= nabavka <= int, date, double
+type <= namirnica <= int, string, float, string
+type <= nabavka_namirnice <= int, int:chained, int:chained, float
+type <= namirnica_u_receptu <= int, int:chained, int:chained, float
+
+chain <= nabavka_namirnice <= nabavka, namirnica
+chain <= namirnica_u_receptu <= recept, namirnica
+
+link <= linear <= custom, 0, 0, 1, 1
+link <= linear_slowdown_factor_y_20_percent <= custom, 0, 0, 1, 0.8
+link <= abs_triangular_2 <= custom, 0, 0, 0.25, 1, 0.5, 0, 0.75, 1, 1, 0
+link <= abs_triangular_2_half_non_zero <= custom, 0, 0.05, 0.25, 0.5, 0.5, 0.05, 0.75, 0.5, 1, 0.05
+
+link <= nabavka_datum_cijena <= abssin, 30, 0.1, 100, 365
+link <= narudzba_datum_isporuke_cijena <= abssin, 50, 0.1, 100, 365
+
++--------------------+
+| GENERATING NABAVKA |
++--------------------+
+bind <= nabavka, nabavka_datum_cijena <= 1, 2
+generator <= nabavka_gen <= nabavka, 40
+config <= auto_increment_base, 1000
+config <= sample_width, 0.7
+execute <= nabavka_gen
+
++---------------------+
+| GENERATING NARUDZBA |
++---------------------+
+config <= custom_link_max_x, 20
+config <= custom_link_max_y, 20
+bind <= narudzba, linear_slowdown_factor_y_20_percent <= -1, 1
+bind <= narudzba, narudzba_datum_isporuke_cijena <= 2, 11
+bind <= narudzba, abs_triangular_2 <= -1, 3
+bind <= narudzba, abs_triangular_2_half_non_zero <= -1, 12
+generator <= narudzba_gen <= narudzba, 25
+config <= auto_increment_base, 1000
+config <= sample_width, 0.8
+execute <= narudzba_gen
